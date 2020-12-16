@@ -12,8 +12,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(bodyParser.json())
 // your code goes here
-const NumOfapi = 0;
-const initialMx = null;
+let NumOfapi = 0;
+let initialMx = null;
 
 app.get('/api/posts' , (req,res) =>{
 

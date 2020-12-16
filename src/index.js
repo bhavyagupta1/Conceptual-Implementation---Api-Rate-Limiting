@@ -23,7 +23,7 @@ app.get('/api/posts' , (req,res) =>{
     }
     const max2 = Number(req.query.max || 10);
     const max1 = max2 > 20 ? 10 : max2;
-    const finalMx = max2;
+    const finalMx = max1;
     if(initialMx !== null){
        finalMx = Math.min(finalMx , initialMx);
     }

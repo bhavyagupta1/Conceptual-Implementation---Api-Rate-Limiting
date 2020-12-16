@@ -27,7 +27,7 @@ app.get('/api/posts' , (req,res) =>{
     if(initialMx !== null){
        finalMx = Math.min(finalMx , initialMx);
     }
-    const result = posts.filter((value , idx) => idx < max1);
+    const result = posts.filter((value , idx) => idx <finalMx);
     res.send(result);
 
     if(initialMx === null){

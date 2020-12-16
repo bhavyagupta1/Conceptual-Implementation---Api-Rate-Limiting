@@ -17,7 +17,7 @@ const initialMx = null;
 
 app.get('/api/posts' , (req,res) =>{
 
-    if(NumOfapi > 5){
+    if(NumOfapi >= 5){
         res.status(429).send({message: "Exceed Number of API Calls"} );
         return;
     }
@@ -27,7 +27,7 @@ app.get('/api/posts' , (req,res) =>{
     if(initialMx !== null){
        finalMx = Math.min(finalMx , initialMx);
     }
-    const result = posts.filter((value , idx) => idx <finalMx);
+    const result = posts.filter((value , idx) => idx < finalMx);
     res.send(result);
 
     if(initialMx === null){
